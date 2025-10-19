@@ -1,1 +1,0 @@
-/home/cole/Documents/Uni/MATH-147/typed-notes/Lecture-Notes-09-29.typ
