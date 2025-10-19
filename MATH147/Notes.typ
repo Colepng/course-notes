@@ -208,11 +208,36 @@ This leads to a problem.
   #proof()[
     Let $epsilon > 0$ be given and take $N = 1/epsilon + 1$.
 
-    We see that $a_n - 0| < epsilon <==> 1/n < epsilon <==> 1/epsilon < n$.
+    We see that $abs(a_n - 0) < epsilon <==> 1/n < epsilon <==> 1/epsilon < n$.
 
     For $n >= N, n > 1/epsilon$ and so $|a_n - 0| < epsilon$.
-  ]asdads
-  -
+  ]
+]
+
+#example()[
+  - $a_n = 1/(n^2 + 1)$
+  *Claim: * $a_n -> 0$
+
+  #proof()[
+  Let $epsilon > 0$ be given and choose $N = sqrt((1 - epsilon)/epsilon) + 1$.
+
+  We see that $abs(a_n - 0) < epsilon <==> 1/(n^2+1) < epsilon <==> 1 < epsilon n^2 + epsilon <==> (1-epsilon)/epsilon <==> n > sqrt((1-3)/epsilon)$.
+
+  For $n >= N, n > sqrt((1-epsilon)/epsilon)$ and so $abs(a_n - 0) < epsilon$
+]
+]
+
+#example()[
+  - $a_n = (5n + 2)/(3n -1) = (5+2/n)/(3-1/n)$
+  *Claim: * $a_n -> 5/3$
+
+  #proof()[
+  Let $epsilon > 0$ be given and take $N = (11 + 3epsilon)/(9epsilon) + 1$. We see that 
+
+  $ abs(a_n - 5/3) < epsilon &<==> abs((5n+2)/(3n-1) - 5/3) < epsilon &&<==> abs((15n + 6 - 15n + 5)/(9n-3)) < epsilon <==>\ 11/(9n-3) &<==> 11 < 9n epsilon - 3 epsilon &&<==> (11 + 3 epsilon)/(9 epsilon) < n $
+
+  For $n >= N, n > (11 + 3 epsilon)/(9 epsilon)$ and so $abs(a_n - 5/3) < epsilon$.
+]
 ]
 
 #align(center)[ == ]
